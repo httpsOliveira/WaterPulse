@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Water Pulse</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Biblioteca de arquivos CSS Utilizados -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/jquery.js"></script>
+</head>
+<script>
+  // Função criada para podermos criar a calculadora que sera chamada pelo ajax
+ $(document).ready(function(){
+      $('#calcula').click(function(){
+        var num1 = $('#num1').val();
+        var num2 = $('#num2').val();
+        var opcao = $('#opcao').val();
+      $.ajax({
+        url: 'http://localhost/SiteDDW2S/PHP/calculadora.php',
+        type: 'POST',
+        dataType: 'text',
+        data: {num1:num1,num2:num2,opcao:opcao},
+        success: function(resultado){
+          $('#resultado').html(resultado);
+          $('#resultado').show();
+        }
+      });
+  });
+}); 
+</script> 
+<body>
+
+  <!--==========================
+   Inicio do site com a construção de um menu de navegação
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html" class="scrollto">Water Pulse</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Inicio</a></li>
+          <li><a href="curiosidades.html">Curiosidades</a></li>
+          <li><a href="economize.html">Economize</a></li>
+          <li><a href="saibamais.html">Saiba mais</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <!--==========================
+      Introdução
+    ============================-->
+    <section id="eco" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Economize</h3>
+          <h4 class="text-center">Á economia e um dos maiores meio para podermos ajudar na luta contra o desperdicio de água!</h4>
+          <span class="section-divider"></span>
+          <p class="text-center">
+           O desperdicio de água e um dos maiores causadores de impactos ambientais. <br> Com as dicas abaixo aprendar como se organizar e ajudar o meio ambiente!
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 eco-img wow fadeInLeft"><br><br><br><br>
+            <img src="img/economia.jpg" class="img-thumbnail">
+       </div>
+
+          <div class="col-lg-6 content wow fadeInRight">
+            <h2>Aprenda como calcular o valor de sua tarifa mensal!</h2>
+            <h3>A estrutura tarifária da Sabesp(Empresa que usei como base) constitui-se de um conjunto de tarifas e regras aplicadas ao faturamento da Companhia em que os usuários são classificados nas categorias divididas em residencial, comercial, industrial e pública.</h3>
+            <p>
+              Adicionalmente, a Sabesp possui tarifas diferenciadas para a população com menor poder aquisitivo e as entidades assistenciais sem fins lucrativos, desde que observadas as condições de elegibilidade publicadas e acatadas por órgão regulador, quando for o caso. Siga a baixo as instruções para aprender o calculo.
+            </p>
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i>1 – Como calcular seu consumo de água em metros cúbicos (m³) para uma economia residencial.<br><br>
+              Primeiro passo: Verifique o valor impresso no espaço LEITURA ATUAL de sua conta de água. <br><br>
+              Segundo passo: Subtraia desse valor o número da LEITURA ANTERIOR. <br><br>
+              Terceiro passo: O resultado dessa conta de subtração representa o consumo de água que você teve no mês. <br>
+              (Ex: se o valor constante no espaço LEITURA ATUAL é 685 m³ e o valor encontrado no espaço LEITURA ANTERIOR é de 658 m³, logo você consumiu no mês 27 m³).685 – 658 = 27 m³;</li></ul></div>
+
+        <div class="row">
+          <div class="col-lg-6 eco-img wow fadeInLeft"><br><br><br><br>
+            <img src="img/economia2.jpg" class="img-thumbnail">
+          </div>
+            <div class="col-lg-6 content wow fadeInRight">
+
+              <li><i class="ion-android-checkmark-circle"></i> 2 – Transformando metros cúbicos (m³) em Reais. <br>
+              Para saber o quanto 27 m³ representam em Reais (R$), que será o volume faturado, deve-se distribuir este volume por faixa de consumo, conforme a estrutura tarifária do Dmae, seguindo o exemplo abaixo: <br><br>
+
+              1ª faixa. O consumo dos primeiros 10 (dez) m³ de água tem o valor associado a uma tarifa mínima, que hoje é de R$ 16,53. <br><br>
+
+              2ª faixa. O usuário deve multiplicar os outros 10 (dez) m³ pelo valor de excedente na segunda faixa de consumo da tabela abaixo. (Ex.: 10 m³ X R$ 1,27 = R$ 12,70).<br><br>
+
+              3ª faixa. O usuário deve multiplicar os 07 (sete) m³ restantes pelo valor de excedente na terceira faixa de consumo da tabela abaixo. (Ex.: 7 m³ X R$ 1,45 = R$ 10,15).<br><br>
+
+              4. O usuário deve agora somar os 03 (três) resultados. (Ex.: R$ 16,53 + R$ 12,70+ 10,15 = R$ 39,38).<br><br>
+
+              5. O resultado encontrado corresponde em Reais (R$) ao volume de água consumido pelo usuário, neste caso, ele pagará R$ 39,38 por 27 m³. <br><br>
+
+              6. Caso o consumidor seja também atendido pela Rede Coletora de Esgoto, o valor cobrado por tal serviço corresponderá a 80% do valor de seu consumo de água. Para saber o valor cobrado pela coleta de seu esgoto, o usuário deverá multiplicar o valor de seu consumo de água pelo coeficiente de consumo 0,80. (Ex.: R$ 39,38 x 0,80 = 31,50).<br><br>
+
+              7. Neste caso, o valor cobrado em sua conta de serviços de abastecimento de água e coleta de esgoto referente a 27 m³ será de R$ 70,88. (Ex.: R$ 39,38 (água) + R$ 31,50 (esgoto) = R$ 70,88).<br></li><br>
+            <p>
+              Bom com toda essa informação seria muito chato pegar papel e caneta para fazermos todo esse calculo doido então é por isso que desenvolvemos uma calculadora para nos ajudar.(Os valores podem mudar conforme a região em que você mora porem a metodologia de calculo quase sempre sera a mesma!)
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  <!-- Calculadora -->
+<section>
+ <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left"><br><br>
+            <h3 class="vtg-titulo">Calculadora de Consumo</h3>
+    <label for="num1">Leitura Atual: </label>
+    <input type="text" id="num1" class="form-control"><br><br>
+
+    <label for="num1" >Leitura Anterior: </label>
+    <input type="text" id="num2" class="form-control"><br><br>
+    <label> Operação <br>
+      <select id="opcao" class="form-control">
+      <option value="z">Selecione uma opção</option>
+      <option value="c">Com Coleta de Esgoto</option>
+      <option value="s">Sem Coleta de Esgoto</option>
+    </select> 
+    </label>
+    <br><br>
+    <button type="button" class="btn btn-primary" id="calcula">Calcular</button><br><br>
+    <div id="resultado" class="alert alert-primary" style="display: none;"></div></div></div></div>
+  </section>
+</div>
+<section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Water Pulse</h3>
+              <p>Gostou do conteudo ? Quer saber um pouco mais ou entrar em contato para conversamos sobre o projeto ? Mande uma mensagem ou me siga nas redes sociais!</p>
+              <div class="social-links">
+                <a href="https://twitter.com/_Skate_Oliveira" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/Sk8.SkateOliveira" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/_skate_oliveira_/" class="instagram"><i class="fa fa-instagram"></i></a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>Rua Professor Euchario Holtz Nº 287 - São Cristóvão<br>Tatuí, SP 18279-070</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p>kaique.oliveira03@hotmail.com</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+55 15 998332760</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Sua mensagem foi enviada, Obrigado!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Digite seu nome" data-rule="minlen:4" data-msg="Escreva um nome valido" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu E-mail" data-rule="email" data-msg="Por favor insira um email valido" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit" title="Enviar Mensagem">Enviar Mensagem</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+</body>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            Todos os direitos reservados &copy;
+          </div>
+          <div class="credits">
+            
+            Desenvolvido por <a href="">Kaique Oliveira</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="index.html">Inicio</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Bibliotecas JavaScript -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- efeitos do jquery -->
+  <script src="js/main.js"></script>
+
+  </html>
